@@ -2,15 +2,47 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
+    <title>{{#if dashboard}}Your Dashboard{{else}}The Tech Blog{{/if}}</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 
-<body>
-    {{{body}}}
+<body class="flex-column min-100-vh">
+    <nav class="navbar">
+        <ul class="flex-row">
+            <li class="nav-item"><a href="/">Home</a></li>
+            {{#if logged_in}}
+            <li class="nav-item"><a href="/dashboard">Dashboard</a></li>
+            <li class="nav-item"><a href="#" id="logout">Logout</a></li>
+            {{else}}
+            <li class="nav-item"><a href="/login">Login</a></li>
+            <li class="nav-item"><a href="/signup">Sign Up</a></li>
+            {{/if}}
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1 class="app-title"><a href="{{#if dashboard}}/dashboard{{else}}/{{/if}}">{{#if dashboard}}Your
+                Dashboard{{else}}The GettingTechy Blog{{/if}}</a></h1>
+    </header>
+
+    <main class="container">
+        {{{body}}}
+    </main>
+
+    <footer class="footer flex-row justify-center">
+        {{#if dashboard}}
+        <a href="/dashboard/new">➕ New Post</a>
+        {{else}}
+        <p>&copy; 2024 GettingTechy Folks</p>
+        {{/if}}
+    </footer>
+
+    {{#if logged_in}}
     <script src="/js/scripts.js"></script>
+    {{/if}}
 </body>
 
 </html>

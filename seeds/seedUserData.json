@@ -1,0 +1,32 @@
+[
+    {
+        "username": "Beans Johnson",
+        "email": "beansjohnson@hamptons.com",
+        "password": "password123"
+    },
+    {
+        "username": "Jon Snow",
+        "email": "knowsnothinig@hamptons.com",
+        "password": "password123"
+    },
+    {
+        "username": "Cody Coder",
+        "email": "codycoder@hamptons.com",
+        "password": "password123"
+    },
+    {
+        "username": "Lily Potter",
+        "email": "hewhomustnotbenamed@hamptons.com",
+        "password": "password123"
+    },
+    {
+        "username": "Aemond Targaryen",
+        "email": "86eyedragonboi@hamptons.com",
+        "password": "password123"
+    },
+    {
+        "username": "Arya Start",
+        "email": "iluvhotpie@hamptons.com",
+        "password": "password123"
+    }
+]

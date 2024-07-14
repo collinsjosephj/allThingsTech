@@ -1,0 +1,62 @@
+[
+    {
+        "content": "This is a great summary of the new features in ES6. Very helpful!",
+        "user_id": 2,
+        "post_id": 1
+    },
+    {
+        "content": "I struggled with async/await initially, but this explanation makes it much clearer. Thanks!",
+        "user_id": 3,
+        "post_id": 2
+    },
+    {
+        "content": "Prettier is indeed a fantastic extension. I can't work without it!",
+        "user_id": 1,
+        "post_id": 3
+    },
+    {
+        "content": "Grok is such a cool concept! It's amazing how deeply one can understand a topic.",
+        "user_id": 5,
+        "post_id": 4
+    },
+    {
+        "content": "React has revolutionized the way I build web applications. The component-based architecture is a game changer.",
+        "user_id": 4,
+        "post_id": 5
+    },
+    {
+        "content": "AI is fascinating! It's incredible how far we've come with machine learning and neural networks.",
+        "user_id": 3,
+        "post_id": 6
+    },
+    {
+        "content": "Can't wait to try out these new features in my next project!",
+        "user_id": 6,
+        "post_id": 1
+    },
+    {
+        "content": "This post was a lifesaver for my project. Async/await is now my go-to for handling async operations.",
+        "user_id": 4,
+        "post_id": 2
+    },
+    {
+        "content": "Thanks for the list of extensions! I've already started using a few of them.",
+        "user_id": 2,
+        "post_id": 3
+    },
+    {
+        "content": "I grok your explanation of Grok!",
+        "user_id": 1,
+        "post_id": 4
+    },
+    {
+        "content": "React is definitely a must-learn for any web developer. Great post!",
+        "user_id": 6,
+        "post_id": 5
+    },
+    {
+        "content": "The advancements in AI are both exciting and a bit scary. We need to be mindful of ethical implications.",
+        "user_id": 5,
+        "post_id": 6
+    }
+]

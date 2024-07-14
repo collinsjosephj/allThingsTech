@@ -1,7 +1,7 @@
 {{> header}}
 <article>
     <h1>{{title}}</h1>
-    <p>Posted by {{user.username}} on {{createdAt}}</p>
+    <p class="post-meta">Posted by {{user.username}} on {{createdAt}}</p>
     <div>{{content}}</div>
     {{#if logged_in}}
     <form id="comment-form">

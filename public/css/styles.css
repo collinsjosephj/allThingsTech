@@ -1,3 +1,151 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* General Styles */
+body {
+font-family: 'Roboto', sans-serif;
+margin: 0;
+padding: 0;
+background: linear-gradient(to right, #000, #444, #888);
+color: #fff;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+
+.navbar {
+background: #222;
+padding: 1em;
+}
+
+.navbar ul {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+justify-content: center;
+}
+
+.navbar ul li {
+margin: 0 1em;
+}
+
+.navbar ul li a {
+color: #fff;
+text-decoration: none;
+transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+color: #ddd;
+}
+
+.hero {
+background: #333;
+text-align: center;
+padding: 2em 0;
+}
+
+.hero .app-title a {
+color: #fff;
+text-decoration: none;
+}
+
+.hero .app-title a:hover {
+color: #ddd;
+}
+
+.container {
+flex: 1;
+padding: 2em;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.footer {
+background: #222;
+text-align: center;
+padding: 1em;
+margin-top: auto;
+}
+
+/* Form Styles */
+form {
+background: #333;
+padding: 2em;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+max-width: 600px;
+margin: 1em auto;
+}
+
+form input,
+form textarea,
+form button {
+width: 100%;
+padding: 1em;
+margin: 0.5em 0;
+border: none;
+border-radius: 5px;
+}
+
+form input,
+form textarea {
+background: #444;
+color: #fff;
+}
+
+form button {
+background: #555;
+color: #fff;
+cursor: pointer;
+transition: background 0.3s;
+}
+
+form button:hover {
+background: #666;
+}
+
+/* Post Styles */
+.post {
+background: #333;
+padding: 1em;
+margin: 1em 0;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.post h2 {
+margin-top: 0;
+}
+
+.post p {
+line-height: 1.5;
+}
+
+.post .post-meta {
+font-size: 0.8em;
+color: #bbb;
+}
+
+/* Responsive Styles */
+@media (min-width: 600px) {
+.navbar ul {
+    justify-content: flex-start;
+}
+
+.container {
+    padding: 2em;
+}
+
+form {
+    margin: 2em auto;
+}
+}
+
+@media (min-width: 900px) {
+.navbar ul li {
+    margin: 0 2em;
+}
+
+form {
+    max-width: 800px;
+}
+}
