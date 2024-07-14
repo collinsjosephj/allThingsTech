@@ -1,0 +1,9 @@
+{{> header}}
+<h1>Dashboard</h1>
+<a href="/dashboard/new">New Post</a>
+{{#each posts}}
+<article>
+    <h2><a href="/dashboard/edit/{{id}}">{{title}}</a></h2>
+    <p>Posted on {{createdAt}}</p>
+</article>
+{{/each}}

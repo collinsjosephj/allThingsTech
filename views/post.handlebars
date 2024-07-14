@@ -1,0 +1,18 @@
+{{> header}}
+<article>
+    <h1>{{title}}</h1>
+    <p>Posted by {{user.username}} on {{createdAt}}</p>
+    <div>{{content}}</div>
+    {{#if logged_in}}
+    <form id="comment-form">
+        <textarea name="content" placeholder="Leave a comment" required></textarea>
+        <button type="submit">Comment</button>
+    </form>
+    {{/if}}
+    {{#each comments}}
+    <div>
+        <p>{{user.username}} commented on {{createdAt}}</p>
+        <p>{{content}}</p>
+    </div>
+    {{/each}}
+</article>
