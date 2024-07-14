@@ -1,18 +1,20 @@
 {{> header}}
-<article>
-    <h1>{{title}}</h1>
-    <p class="post-meta">Posted by {{user.username}} on {{createdAt}}</p>
-    <div>{{content}}</div>
+<article class="bg-gray-700 p-6 rounded-lg shadow-lg">
+    <h1 class="text-2xl font-bold mb-4">{{title}}</h1>
+    <p class="text-sm text-gray-400 mb-6">Posted by {{user.username}} on {{createdAt}}</p>
+    <div class="mb-6">{{content}}</div>
     {{#if logged_in}}
-    <form id="comment-form">
-        <textarea name="content" placeholder="Leave a comment" required></textarea>
-        <button type="submit">Comment</button>
+    <form id="comment-form" class="space-y-4">
+        <textarea name="content" placeholder="Leave a comment" required class="w-full p-4 rounded-lg bg-gray-800 text-white"></textarea>
+        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg">Comment</button>
     </form>
     {{/if}}
     {{#each comments}}
-    <div>
-        <p>{{user.username}} commented on {{createdAt}}</p>
+    <div class="mt-6">
+        <p class="text-sm text-gray-400">{{user.username}} commented on {{createdAt}}</p>
         <p>{{content}}</p>
     </div>
     {{/each}}
 </article>
+
+<script src="/js/scripts.js"></script>

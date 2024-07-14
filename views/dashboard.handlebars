@@ -1,9 +1,17 @@
 {{> header}}
-<h1>Dashboard</h1>
-<a href="/dashboard/new">New Post</a>
-{{#each posts}}
-<article>
-    <h2><a href="/dashboard/edit/{{id}}">{{title}}</a></h2>
-    <p>Posted on {{createdAt}}</p>
-</article>
-{{/each}}
+<main class="container mx-auto p-4">
+    <h1 class="text-3xl font-bold mb-4">Dashboard</h1>
+    <div class="space-y-4">
+        {{#each posts}}
+        <div class="bg-gray-700 p-4 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold mb-2"><a href="/post/{{id}}"
+                    class="text-white hover:text-gray-300">{{title}}</a></h2>
+            <p class="text-sm text-gray-400">Posted on {{createdAt}}</p>
+            <p class="mt-2">{{content}}</p>
+            <a href="/dashboard/edit/{{id}}" class="text-blue-500 hover:text-blue-700">Edit</a>
+        </div>
+        {{/each}}
+    </div>
+</main>
+
+<script src="/js/scripts.js"></script>
