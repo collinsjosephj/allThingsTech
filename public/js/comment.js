@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const commentForm = document.querySelector('#new-comment-form');
-    
+
     if (commentForm) {
         commentForm.addEventListener('submit', async (event) => {
-            event.preventDefault(); 
+            event.preventDefault();
 
             const content = commentForm.querySelector('textarea[name="comment-body"]').value.trim();
             const postId = commentForm.querySelector('input[name="post-id"]').value;
