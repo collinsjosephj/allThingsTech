@@ -8,7 +8,7 @@
                 </div>
             </div>
             <div class="card-body text-white">
-                {{content}}
+                {{post_content}}
             </div>
         </article>
 
@@ -19,7 +19,10 @@
             </div>
             <div class="card-body">
                 {{#each comments}}
-                {{> comment }}
+                <div class="mt-4 p-4 bg-gray-800 rounded-lg">
+                    <p class="text-white"><strong>{{user.username}}:</strong> {{comment_content}}</p>
+                    <p class="text-gray-400 text-sm">{{formatDates createdAt}}</p>
+                </div>
                 {{/each}}
             </div>
         </section>
@@ -40,21 +43,6 @@
         {{else}}
         <p class="mt-4 text-gray-400">You must be logged in to comment.</p>
         {{/if}}
-    </div>
-
-    <!-- Edit Comment Form -->
-    <div id="edit-comment-modal" class="hidden fixed z-50 inset-0 overflow-y-auto">
-        <div class="flex items-center justify-center min-h-screen">
-            <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-1/2">
-                <h3 class="text-xl font-semibold text-white mb-4">Edit Comment</h3>
-                <form id="edit-comment-form">
-                    <input type="hidden" name="comment-id">
-                    <textarea name="comment-text" class="form-input w-full p-2 rounded-md bg-gray-900 text-white mt-2 mb-4" required></textarea>
-                    <button type="submit" class="btn bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">Save</button>
-                    <button type="button" id="cancel-edit-btn" class="btn bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-700">Cancel</button>
-                </form>
-            </div>
-        </div>
     </div>
 </main>
 
