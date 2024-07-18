@@ -2,7 +2,7 @@
   "name": "allthingstech",
   "version": "1.0.0",
   "description": "Writing about tech can be just as important as making it. Developers spend plenty of time creating new applications and debugging existing codebases, but most developers also spend at least some of their time reading and writing about technical concepts, recent advancements, and new technologies.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
@@ -10,8 +10,8 @@
     "build": "tailwindcss -i ./public/css/tailwind.css -o ./public/css/styles.css"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Joseph Collins",
+  "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "connect-session-sequelize": "^7.1.7",
@@ -23,6 +23,7 @@
     "sequelize": "^6.37.3"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.4"
+    "tailwindcss": "^3.4.4",
+    "nodemon": "^3.0.2"
   }
 }
