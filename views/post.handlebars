@@ -8,7 +8,7 @@
                 </div>
             </div>
             <div class="card-body text-white">
-                {{content}}
+                {{post_content}}
             </div>
         </article>
 
@@ -19,14 +19,17 @@
             </div>
             <div class="card-body">
                 {{#each comments}}
-                {{> comment }}
+                <div class="mt-4 p-4 bg-gray-800 rounded-lg">
+                    <p class="text-white"><strong>{{user.username}}:</strong> {{comment_content}}</p>
+                    <p class="text-gray-400 text-sm">{{formatDates createdAt}}</p>
+                </div>
                 {{/each}}
             </div>
         </section>
         {{/if}}
 
         {{#if logged_in}}
-        <form id="new-comment-form" class="card mt-6 bg-gray-800 p-4 rounded-lg" data-post-id="{{id}}">
+        <form id="new-comment-form" class="card mt-6 bg-gray-800 p-4 rounded-lg">
             <div class="card-header mb-4">
                 <h3 class="text-xl font-semibold text-white">Add New Comment</h3>
             </div>

@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (title && content) {
                 const response = await fetch('/api/posts', {
                     method: 'POST',
-                    body: JSON.stringify({ title, content }),
+                    body: JSON.stringify({ title, post_content: content }),
                     headers: { 'Content-Type': 'application/json' },
                 });
 

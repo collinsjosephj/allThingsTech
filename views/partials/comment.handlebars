@@ -1,4 +1,7 @@
-<div class="mt-4 p-4 bg-gray-800 rounded-lg">
+<div class="mt-4 p-4 bg-gray-800 rounded-lg" data-comment-id="{{id}}">
     <p class="text-white"><strong>{{user.username}}:</strong> {{comment_content}}</p>
     <p class="text-gray-400 text-sm">{{formatDates createdAt}}</p>
+    {{#ifEquals user_id ../logged_in_user_id}}
+    <button class="edit-comment-btn text-blue-500 hover:text-blue-700 mt-2">Edit</button>
+    {{/ifEquals}}
 </div>

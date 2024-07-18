@@ -1,4 +1,3 @@
-require('dotenv').config();
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
@@ -14,9 +13,11 @@ const PORT = process.env.PORT || 3000;
 
 const hbs = exphbs.create({ 
     helpers: {
-        formatDates: helpers.formatDates
+        formatDates: helpers.formatDates,
+        ifEquals: helpers.ifEquals
     }
 });
+
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
