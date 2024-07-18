@@ -1,5 +1,12 @@
 module.exports = {
-    format_date: (date) => {
-        return date.toLocaleDateString();
-    },
+    formatDates: (date) => {
+        if (!date) {
+            return '';
+        }
+        return new Date(date).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    }
 };

@@ -1,32 +1,32 @@
 [
     {
         "title": "New Features in JavaScript ES6",
-        "content": "Arrow Functions: Provide a shorter syntax for writing functions and lexically bind the this value, which simplifies handling the this keyword in nested functions, neat!",
+        "post_content": "Arrow Functions: Provide a shorter syntax for writing functions and lexically bind the this value, which simplifies handling the this keyword in nested functions, neat!",
         "user_id": 1
     },
     {
         "title": "Understanding Async/Await in Node.js",
-        "content": "Async/Await in Node.js is a great way to handle asynchronous operations. It allows you to write asynchronous code in a synchronous manner.",
+        "post_content": "Async/Await in Node.js is a great way to handle asynchronous operations. It allows you to write asynchronous code in a synchronous manner.",
         "user_id": 2
     },
     {
         "title": "Top 10 VS Code Extensions for Developers",
-        "content": "Visual Studio Code offers a plethora of extensions to make your development workflow easier and more efficient. Here are the top 10 extensions you should consider. Prettier is my favorite!",
+        "post_content": "Visual Studio Code offers a plethora of extensions to make your development workflow easier and more efficient. Here are the top 10 extensions you should consider. Prettier is my favorite!",
         "user_id": 3
     },
     {
         "title": "Grok",
-        "content": "The term has been widely adopted in technical and hacker communities to describe a level of understanding that transcends superficial knowledge and reaches into the core of the subject. Twitter, or X has given the name to its AI!",
+        "post_content": "The term has been widely adopted in technical and hacker communities to describe a level of understanding that transcends superficial knowledge and reaches into the core of the subject. Twitter, or X has given the name to its AI!",
         "user_id": 4
     },
     {
         "title": "React.js",
-        "content": "React.js is a popular open-source JavaScript library developed by Facebook for building user interfaces, particularly single-page applications where efficient rendering of dynamic content is essential.",
+        "post_content": "React.js is a popular open-source JavaScript library developed by Facebook for building user interfaces, particularly single-page applications where efficient rendering of dynamic post_content is essential.",
         "user_id": 5
     },
     {
         "title": "AI",
-        "content": "Artificial Intelligence (AI) is a branch of computer science that aims to create systems capable of performing tasks that typically require human intelligence. These tasks include learning, reasoning, problem-solving, understanding natural language, perception, and decision-making.",
+        "post_content": "Artificial Intelligence (AI) is a branch of computer science that aims to create systems capable of performing tasks that typically require human intelligence. These tasks include learning, reasoning, problem-solving, understanding natural language, perception, and decision-making.",
         "user_id": 6
     }
 ]

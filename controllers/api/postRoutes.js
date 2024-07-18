@@ -1,7 +1,8 @@
 const router = require('express').Router();
-const { Post } = require('../../models');
+const { Post, Comment, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// Create a new post
 router.post('/', withAuth, async (req, res) => {
     try {
         const newPost = await Post.create({
@@ -14,6 +15,7 @@ router.post('/', withAuth, async (req, res) => {
     }
 });
 
+// Update a post
 router.put('/:id', withAuth, async (req, res) => {
     try {
         const updatedPost = await Post.update(req.body, {
@@ -31,6 +33,7 @@ router.put('/:id', withAuth, async (req, res) => {
     }
 });
 
+// Delete a post
 router.delete('/:id', withAuth, async (req, res) => {
     try {
         const postData = await Post.destroy({
@@ -44,6 +47,41 @@ router.delete('/:id', withAuth, async (req, res) => {
             return;
         }
         res.status(200).json(postData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+// Get a single post by ID
+router.get('/:id', async (req, res) => {
+    try {
+        const postData = await Post.findByPk(req.params.id, {
+            include: [
+                {
+                    model: User,
+                    attributes: ['username'],
+                },
+                {
+                    model: Comment,
+                    include: {
+                        model: User,
+                        attributes: ['username'],
+                    },
+                },
+            ],
+        });
+
+        if (!postData) {
+            res.status(404).json({ message: 'No post found with this id!' });
+            return;
+        }
+
+        const post = postData.get({ plain: true });
+
+        res.render('post', {
+            ...post,
+            logged_in: req.session.logged_in,
+        });
     } catch (err) {
         res.status(500).json(err);
     }
